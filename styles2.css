@@ -1,0 +1,25 @@
+
+h1{
+    font-size: 30px;
+    color:white;
+    margin:0.1em;
+    background-color: darkred;
+    border-bottom: solid skyblue 0.3rem
+}
+p{
+    font-size: 18px
+}
+li{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:left;
+    list-style-type:square;
+}
+.always{
+    color:darkred;
+    font-weight:bold;
+}
+.usually{
+    color:black;
+    font-weight:bold;
+}
