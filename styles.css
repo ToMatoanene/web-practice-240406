@@ -29,7 +29,7 @@ h2{
 }
 
 h3{
-    border-bottom:double 3px salmon;
+    background:linear-gradient(transparent 60%, salmon 0%);
     display:inline-block;
 }
 
@@ -64,13 +64,14 @@ p .blank{
     padding:0;
 }
 
+
 .contents{
     margin-bottom:30px;
     padding:1em 1em 1em 2em;
     border:1px solid #999;
     background-color:#f7f7f7;
-    color:#333333;
 }
+
 
 .contents div{
     font-size: 20px;
@@ -78,6 +79,7 @@ p .blank{
     align-items:center;
     margin:0;
     padding: 5px 0;
+    color:#333333
 }
 
 .contents ol{
@@ -89,16 +91,24 @@ p .blank{
 
 .contents ol ol{
     list-style-type:decimal;
-    margin-top:5px;
+    margin-top:5px; 
 }
 
 .contents li{
     padding:5px 0;
 }
 
+.contents li:hover{
+    color:#999;
+}
+
 a{
     text-decoration: none;
-    color:#166c9d
+    color:#166c9d;
+}
+
+a:hover{
+    color:#999;
 }
 
 footer{
