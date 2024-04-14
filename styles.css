@@ -1,8 +1,12 @@
+body{
+    font-family:sans-serif;
+}
+
 img{
     width:500px;
 }
 
-img.scdown{
+.scdown{
     width:auto;
     height:500px
 }
@@ -16,7 +20,7 @@ h1{
     color:black;
     text-align:center;
     padding:5%;
-    margin-bottom: 70px;
+    margin-bottom: 0px;
     background-color:salmon;
 }
 
@@ -39,6 +43,11 @@ p .blank{
     padding:0;
 }
 
+p .date{
+    color:#999
+}
+
+/* まとめ */
 .summary{
     position:relative;
     margin:2em 0em;
@@ -64,7 +73,7 @@ p .blank{
     padding:0;
 }
 
-
+/* 目次 */
 .contents{
     margin-bottom:30px;
     padding:1em 1em 1em 2em;
