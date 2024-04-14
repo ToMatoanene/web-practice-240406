@@ -1,0 +1,114 @@
+img{
+    width:500px;
+}
+
+img.scdown{
+    width:auto;
+    height:500px
+}
+
+.scdown2{
+    width:auto;
+    height:250px;
+}
+
+h1{
+    color:black;
+    text-align:center;
+    padding:5%;
+    margin-bottom: 70px;
+    background-color:salmon;
+}
+
+h2{
+    color:black;
+    display:inline-block;
+    padding:5px;
+    background-color:#F9C3BD;
+}
+
+.summary{
+    position:relative;
+    margin:2em 0em;
+    padding:0.5em 1em;
+    border:solid 3px salmon;
+}
+.summary .summary-title{
+    position:absolute;
+    display:inline-block;
+    top: -27px;
+    left:-3px;
+    padding:0 9px;
+    height:25px;
+    line-height:25px;
+    font-size:17px;
+    background:salmon;
+    color:white;
+    font-weight:bold;
+    border-radius:5px 5px 0 0;
+}
+.summary ul li{
+    margin:10px 0;
+    padding:0;
+}
+
+.contents{
+    margin-bottom:30px;
+    padding:1em 1em 1em 2em;
+    border:1px solid #999;
+    background-color:#f7f7f7;
+    color:#333333;
+}
+
+.contents div{
+    font-size: 20px;
+    display: flex;
+    align-items:center;
+    margin:0;
+    padding 5px 0;
+}
+
+.contents ol{
+    list-style-type:disc;
+    margin:0;
+    padding:0 1.2em;
+    overflow:hidden;
+}
+
+.contents ol ol{
+    list-style-type:decimal;
+    margin-top:5px;
+}
+
+.contents li{
+    padding:5px 0;
+}
+
+a{
+    text-decoration: none;
+    color:#166c9d
+}
+
+/* 上に戻るボタン */
+.pagetop {
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 1.5rem;
+	width: 3.3rem;
+	height: 3.3rem;
+	line-height: 3.3rem;
+	border-radius: 3.3rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.pagetop:hover {
+	color: #fff !important;
+	background-color: salmon;
+	text-decoration: none;
+}

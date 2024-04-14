@@ -3,22 +3,52 @@
     <head>
         <title>DNA double strand</title>
         <link rel="stylesheet" href="./styles.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+        jQuery(document).ready(function() {
+        var offset = 100;
+        var duration = 500;
+        jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+        jQuery('.pagetop').fadeIn(duration);
+        } else {
+        jQuery('.pagetop').fadeOut(duration);
+        }
+        });
+
+        jQuery('.pagetop').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+        })
+        });
+        </script>
     </head>
     <body>
         <h1>なぜDNAは２本鎖なの？</h1>
-        <h2>まとめ</h2>
+        <div class="summary">
+            <span class="summary-title">この記事のまとめ</span>
             <ul>
                 <li>DNAが相補的２本鎖であるのは、DNAを複製するのに役立つからである。</li>
                 <li>DNAの複製は①２本鎖の開裂、②プライマーの結合、③DNAポリメラーゼによる鎖の伸長④RNAプライマーのDNAへの置換の４つのステップに分かれている。</li>
                 <li>同一配列のDNAを一度で複製するには、相補的２本鎖である必要がある。</li>
                 <li>２本鎖には、片方の鎖が傷ついた時に相方の鎖を鋳型として修復できるという利点もある。</li>
             </ul>
-        <h2>もくじ</h2>
+        </div>
+        <div class="contents">
+            <div>目次</div>
             <ol>
                 <li><a href="#i1">授業の復習</a></li>
                 <li><a href="#i2">DNAの複製</a></li>
+                <ol>
+                    <li><a href="#i2-1">①２本鎖の開裂</a></li>
+                    <li><a href="#i2-2">②プライマーの結合</a></li>
+                    <li><a href="#i2-3">③DNAポリメラーゼによる鎖の伸長</a></li>
+                    <li><a href="#i2-4">④RNAプライマーのDNAへの置換</a></li>
+                </ol>
                 <li><a href="#i3">DNAが相補的な２本鎖であることの意義</a></li>
             </ol>
+        </div>
         <h2 id="i1">授業の復習</h2>
             <p>
                 １本のDNAには、A・T・G・Cの４種類の塩基（パーツ）が並んでいます。
@@ -28,7 +58,7 @@
             <img src="./QRcode_illustratioin/DNA_double strand_color.jpg" alt="DNA２本鎖">
             <p>
                 では、なぜわざわざ２本鎖になるのでしょうか？１本鎖よりも優れている点があるのでしょうか？
-                実は、DNAを「複製」するときに２本鎖であることがとても役立つのです。
+                実は、<b>DNAを「複製」するときに２本鎖であることがとても役立つ</b>のです。
                 まずはDNAの複製について見てみましょう。
             </p>
         <h2 id="i2">DNAの複製</h2>
@@ -43,15 +73,15 @@
             </p>
             <img src="./QRcode_illustratioin/Cell_duplicate.jpg" alt="細胞分裂">
             <p>
-                DNAの複製は①２本鎖の開裂、②プライマーの結合、③DNAポリメラーゼによる鎖の伸長④RNAプライマーのDNAへの置換の４つのステップに分かれています。
+                DNAの複製は<b>①２本鎖の開裂、②プライマーの結合、③DNAポリメラーゼによる鎖の伸長④RNAプライマーのDNAへの置換</b>の４つのステップに分かれています。
             </p>
-            <h3>①２本鎖の開裂</h3>
+            <h3 id="i2-1">①２本鎖の開裂</h3>
                 <p>
                     ヘリカーゼという酵素（化学反応を助けるタンパク質）はAとT、GとCの間の結合を切ることができます。
                     この働きによって、２本鎖DNAが１本鎖DNAに開裂します。
                 </p>
                 <img src="./QRcode_illustratioin/DNA_duplicate_step1.jpg" alt="DNA複製１">
-            <h3>②プライマーの結合</h3>
+            <h3 id="i2-2">②プライマーの結合</h3>
                 <p>
                     この時点で１本鎖DNAが２本できています。
                     それぞれの「相方」の鎖を作っていきたいのですが、そのためにはまず、プライマーと呼ばれる「足場」を作る必要があります。
@@ -59,7 +89,7 @@
                     RNAはDNAとよく似た構造をもつため、DNAと結合することができます（DNA同士の結合のしくみと非常に似ています）。
                 </p>
                 <img src="./QRcode_illustratioin/DNA_duplicate_step2.jpg" alt="DNA複製２">
-            <h3>③DNAポリメラーゼによる鎖の伸長</h3>
+            <h3 id="i2-3">③DNAポリメラーゼによる鎖の伸長</h3>
                 <p>
                     いよいよ、「相方」の鎖を作ることになります。
                     この働きを担うのはDNAポリメラーゼと呼ばれる酵素です。
@@ -67,14 +97,14 @@
                     １本鎖の塩基配列（A・T・G・Cの順番）を読み取り、それと対応する順番になるように新しいDNA鎖を合成します。
                     例えば「ACGCT」という配列を読み取ると「TGCGA」の順番に塩基を結合させるのです。
                 </p>
-                <img src="./QRcode_illustratioin/DNA_duplicate_step3.jpg" alt="DNA複製３">
-            <h3>④RNAプライマーのDNAへの置換</h3>
+                <img src="./QRcode_illustratioin/DNA_duplicate_step3.jpg" alt="DNA複製３" class="scdown">
+            <h3 id="i2-4">④RNAプライマーのDNAへの置換</h3>
                 <p>
                     これでDNA複製はほぼ完了です。
                     しかし、複製がはじまった場所にはRNAプライマーが結合していましたね。
                     最後に、プライマー部分がDNAに置き換わることで鎖の全部分を複製することができます。
                 </p>
-                <img src="./QRcode_illustratioin/DNA_duplicate_step4.jpg" alt="DNA複製４">
+                <img src="./QRcode_illustratioin/DNA_duplicate_step4.jpg" alt="DNA複製４" class="scdown2">
             <p>
                 以上がDNA複製の仕組みです。
             </p>
@@ -90,4 +120,5 @@
                 その他にも、片方の鎖が傷ついた時に相方の鎖を鋳型として修復できるという利点もあります。
                 DNAは生命の設計書なので、情報が変わったり失われたりしないように保存する仕組みが重要なのです。
             </p>
+        <div class="pagetop">↑</div>
     </body>
