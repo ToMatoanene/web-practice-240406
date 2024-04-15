@@ -1,33 +1,161 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>第２回課題</title>
+        <title>PAGE mechanism</title>
         <link rel="stylesheet" href="./styles2.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+        jQuery(document).ready(function() {
+        var offset = 100;
+        var duration = 500;
+        jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+        jQuery('.pagetop').fadeIn(duration);
+        } else {
+        jQuery('.pagetop').fadeOut(duration);
+        }
+        });
+
+        jQuery('.pagetop').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+        })
+        });
+        </script>
     </head>
+
     <body>
-        <h1>Introduction to Kinki Region</h1>
-        <p>
-            Kinki Region is one of the geographic areas in Japan.
-            It is located in the center of the main island Honshu.
-        </p>
-        <a href="https://ja.wikipedia.org/wiki/%E8%BF%91%E7%95%BF%E5%9C%B0%E6%96%B9">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Kansai_Region_in_Japan.svg/512px-Kansai_Region_in_Japan.svg.png">
-        </a>
-        <p>
-            There are 7 prefectures in Kinki Region. 
-            Here is the list of them.
-        </p>
-        <ul>
-            <li class="usually">Osaka</li>
-            <li class="always">Kyoto</li>
-            <li>Hyogo</li>
-            <li>Nara</li>
-            <li class="usually">Shiga</li>
-            <li>Wakayama</li>
-            <li>Mie*</li>
-        </ul>
-        <p>
-            *Notes; Mie is not included into Kinki Region in some election systems.
-        </p>
+        <h1>電気泳動ってどうやって起こっているの？</h1>
+        <p class="date">更新日時 2024年4月15日</p>
+
+        <div class="summary">
+            <span class="summary-title">この記事のまとめ</span>
+            <ul>
+                <li>電気泳動はDNAを鎖の長さごとに分けるための技術である。</li>
+                <li>DNAは負の電荷（マイナスチャージ）を持っており、プラスの電気に引っ張られる。</li>
+                <li>ゲルは繊維が絡み合ってできており、長いDNAほど進みが遅くなる。</li>
+            </ul>
+        </div>
+
+        <div class="contents">
+            <div>目次</div>
+            <ol>
+                <li><a href="#i1">授業の復習１　〜電気泳動とは〜</a></li>
+                <li><a href="#i2">授業の復習２　〜電気泳動の仕組み〜</a></li>
+                <li><a href="#i3">電気泳動の詳しい仕組み</a></li>
+                <ol>
+                    <li><a href="#i3-1">どうしてDNAは電気の力で引っ張られるの？</a></li>
+                    <li><a href="#i3-2">ゲルって何？</a></li>
+                    <li><a href="#i3-3">どうして長いDNAほど移動速度が遅いの？</a></li>
+                </ol>
+            </ol>
+        </div>
+
+        <h2 id="i1">授業の復習１　〜電気泳動とは〜</h2>
+            <p>
+                <b>電気泳動とは、物質を大きさ・長さごとに分けるための技術</b>です。
+                授業ではDNAの電気泳動について学びましたが、タンパク質やRNAなど他の物質の分析にも用いられます。
+                ここからはDNAの電気泳動に注目して見ていきます。
+                DNAの電気泳動はPCR法と組み合わせて使われることが多いです。
+                PCR法について復習しましょう。３つの温度サイクル（95℃、60℃、72℃）を繰り返すことで、目的のDNAを増幅する手法でしたね。
+            </p>
+            <div class="jump">
+                <div class="jump-title">✔︎　参考</div>
+                <p>
+                    PCR法にも応用されている「DNAの複製」の仕組みについては<a href="https://tomatoanene.github.io/web-practice-240406/">こちら</a>の記事を読んでみてください。
+                </p>
+            </div>
+            <p>
+                <b>DNAを長さごとに分けることで「PCRが成功したのか」、つまり「目的の長さのDNAがちゃんと増えているか」を確認することができます。</b>
+                このように、電気泳動は生物学の研究を行う上で不可欠な技術なのです。
+            </p>
+
+        <h2 id="i2">授業の復習２　〜電気泳動の仕組み〜</h2>
+            <p>
+                電気泳動の仕組みについて復習しましょう。
+                電気泳動に必要なのは、ゲル・電気を流す装置・DNAの入った液の３つです。
+                （厳密には、余計な化学反応を抑えるための緩衝液も必要です。）
+            </p>
+            <img src="" alt="電気泳動材料">
+            <p></p>
+            <h3>手順</h3>
+                <ol>
+                    <li>ゲルを装置にセットします。</li>
+                    <li>ゲルの穴にDNAの入った液を流し入れます。</li>
+                    <li>ゲルに電気を流します。</li>
+                    <li>DNAが電気の力で引っ張られ、ゲルの中を通って移動します。</li>
+                    <li>長いDNAほど移動速度が遅いため、長さごとにDNAを分けることができます。</li>
+                </ol>
+                <img src="" alt="手順">
+            <p>
+                ここで様々な疑問が出てきませんか。
+            </p>
+            <ul class="questions">
+                <li>どうしてDNAは電気の力で引っ張られるの？</li>
+                <li>ゲルって何？</li>
+                <li>どうして長いDNAほど移動速度が遅いの？</li>
+            </ul>
+            <p>
+                次の章ではこれらの疑問に答えていきます。
+            </p>
+            
+        <h2 id="i3">電気泳動の詳しい仕組み</h2>
+            <h3 id="i3-1">どうしてDNAは電気の力で引っ張られるの？</h3>
+                <p>
+                    DNAは「塩基」「糖」「リン酸」という３種類の物質で構成されています。
+                    リン酸は水に溶けると、マイナスの電気を帯びたイオンになるという性質があります。
+                    そのため、DNA全体も水の中でマイナスの電気を帯びることになります。
+                </p>
+                <img src="" alt="リン酸の負電荷">
+                <p>
+                    マイナスの電気とプラスの電気は引きつけ合う関係にあります。
+                    磁石と同じイメージで、同じもの同士（プラスとプラス、マイナスとマイナス）は退け合い、違うもの同士（プラスとマイナス）は引きつけ合うのです。
+                    そのため、<b>マイナスの電気を帯びたDNAは、装置のプラス極（陽極）側へと引っ張られる</b>というわけです。
+                </p>
+                <img src="" alt="電気的な引力">
+                <p></p>
+
+            <h3 id="i3-2">ゲルって何？</h3>
+                <p>
+                    ゲルは寒天にも含まれるアガロースという繊維でできています。
+                    アガロースは高温（80-95℃）では液体なのですが、常温（32-40℃）では寒天のようなプルプルの状態をとります。
+                    このプルプルの状態をゲルと呼びます。
+                </p>
+                <img src="" alt="アガロース状態変化">
+                <p>
+                    ゲルを顕微鏡で見てみると、繊維が複雑に絡まった「あみ状構造」をしています。
+                    この「あみ状構造」こそが電気泳動を可能にしているのです。  
+                </p>
+                <img src="" alt="アガロース網状構造">
+                <p></p>
+
+            <h3 id="i3-3">どうして長いDNAほど移動速度が遅いの？</h3>
+                <p>
+                    プラス極側に引っ張られたDNAはゲルを通って移動しますが、ゲルの「あみ状構造」に引っかかってなかなか進めません。
+                    ここで想像してみましょう。
+                    長いDNAと短いDNA、どちらの方が引っかかりやすいでしょうか。
+                </p>
+                <p>
+                    そう、<b>長いDNAの方が「あみ状構造」に引っかかりやすいので移動速度が遅い</b>のです。
+                    では最後にクイズです。
+                    電気泳動の写真は、DNAを流し入れた穴が上にくるように撮るのですが、下の図のaとbに存在するDNAはどちらが長いでしょうか。
+                </p>
+                <img src="" alt="電気泳動写真">
+                <ul>
+                    <li>答え：a</li>
+                    <li>解説：DNAを流し入れた穴が上にくるということは、上から下に向かってDNAが移動したということです。
+                        長いDNAほど移動速度が遅いのですから、移動距離が短いaの方が長い鎖をもつと予想できます。
+                    </li>
+                </ul>
+
+        <div class="pagetop">↑</div>
+        <footer class="footer">
+            <p>©️ iGEM Kyoto 2024. All Rights Reserved.</p>
+            <ul>
+                <li><a href="https://igemkyotoofficial.github.io/">About</a></li>
+                <li><a href="https://2023.igem.wiki/kyoto/">2023年度wiki</a></li>
+                <li><a href="https://2021.igem.org/Team:Kyoto">2021年度wiki</a></li>
+            </ul>
+        </footer>
     </body>
-</html>

@@ -1,25 +1,190 @@
+body{
+    font-family:sans-serif;
+    margin: 80px;
+}
+
+img{
+    width:500px;
+}
+
+.scdown{
+    width:auto;
+    height:500px
+}
+
+.scdown2{
+    width:auto;
+    height:300px;
+}
 
 h1{
-    font-size: 30px;
-    color:white;
-    margin:0.1em;
-    background-color: darkred;
-    border-bottom: solid skyblue 0.3rem
-}
-p{
-    font-size: 18px
-}
-li{
-    font-size: 18px;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align:left;
-    list-style-type:square;
-}
-.always{
-    color:darkred;
-    font-weight:bold;
-}
-.usually{
     color:black;
+    text-align:center;
+    padding:5%;
+    margin-bottom: 0px;
+    background-color:#50C878;
+}
+
+h2{
+    padding:0.3em 0.5em;
+    margin:1em 0;
+    color:black;
+    background:gainsboro;
+    border-left:solid 10px #50C878;
+}
+
+h3{
+    background:linear-gradient(transparent 60%, #50C878 0%);
+    display:inline-block;
+}
+
+p .blank{
+    font-size:0px;
+    margin:0;
+    padding:0;
+}
+
+p .date{
+    color:#999
+}
+
+/*DNA複製の記事に飛ぶ*/
+.jump{
+        position:relative;
+        margin:2em 0em;
+        padding:0em 1em;
+        border:solid 3px #50C878;
+        background-color: #CCE7D3;
+}
+
+.jump .jump-title{
+    position:absolute;
+    display:inline-block;
+    top: -15px;
+    left:-3px;
+    padding:0 9px;
+    height:25px;
+    line-height:25px;
+    font-size:17px;
+    background:#50C878;
+    color:white;
     font-weight:bold;
+}
+
+.questions{
+    font-weight: bold;
+    list-style-type: none;
+}
+
+/* まとめ */
+.summary{
+    position:relative;
+    margin:2em 0em;
+    padding:0.5em 1em;
+    border:solid 3px #50C878;
+}
+.summary .summary-title{
+    position:absolute;
+    display:inline-block;
+    top: -27px;
+    left:-3px;
+    padding:0 9px;
+    height:25px;
+    line-height:25px;
+    font-size:17px;
+    background:#50C878;
+    color:white;
+    font-weight:bold;
+    border-radius:5px 5px 0 0;
+}
+.summary ul li{
+    margin:10px 0;
+    padding:0;
+}
+
+/* 目次 */
+.contents{
+    margin-bottom:30px;
+    padding:1em 1em 1em 2em;
+    border:1px solid #999;
+    background-color:#f7f7f7;
+}
+
+
+.contents div{
+    font-size: 20px;
+    display: flex;
+    align-items:center;
+    margin:0;
+    padding: 5px 0;
+    color:#333333
+}
+
+.contents ol{
+    list-style-type:disc;
+    margin:0;
+    padding:0 1.2em;
+    overflow:hidden;
+}
+
+.contents ol ol{
+    list-style-type:decimal;
+    margin-top:5px; 
+}
+
+.contents li{
+    padding:5px 0;
+}
+
+.contents li:hover{
+    color:#999;
+}
+
+a{
+    text-decoration: none;
+    color:#166c9d;
+}
+
+a:hover{
+    color:#999;
+}
+
+footer{
+    width:100%;
+    height:100px;
+    text-align:center;
+    padding:50px 0;
+    background-color:#9FE2BF;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer ul a{
+    color: darkslategrey;
+}
+
+/* 上に戻るボタン */
+.pagetop {
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 1.5rem;
+	width: 3.3rem;
+	height: 3.3rem;
+	line-height: 3.3rem;
+	border-radius: 3.3rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.pagetop:hover {
+	color: #fff !important;
+	background-color: #50C878;
+	text-decoration: none;
 }

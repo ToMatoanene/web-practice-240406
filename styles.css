@@ -1,5 +1,6 @@
 body{
     font-family:sans-serif;
+    margin: 80px;
 }
 
 img{
@@ -46,6 +47,30 @@ p .blank{
 p .date{
     color:#999
 }
+
+/*電気泳動の記事に飛ぶ*/
+.jump{
+    position:relative;
+    margin:2em 0em;
+    padding:0em 1em;
+    border:solid 3px salmon;
+    background-color: #feded2;
+}
+
+.jump .jump-title{
+position:absolute;
+display:inline-block;
+top: -15px;
+left:-3px;
+padding:0 9px;
+height:25px;
+line-height:25px;
+font-size:17px;
+background:salmon;
+color:white;
+font-weight:bold;
+}
+
 
 /* まとめ */
 .summary{
